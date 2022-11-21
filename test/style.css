@@ -1,0 +1,44 @@
+.input-group__control {
+  display: none;
+}
+
+.input-group__text::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 2px solid brown;
+  margin-right: 5px;
+  border-radius: 35%;
+}
+
+.input-group__control:checked + .input-group__text::before {
+  background: mediumslateblue;
+}
+
+.switch__container {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
+  background: lightcoral;
+}
+.display_control {
+  display: none;
+}
+
+.switch__toggle {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  background: white;
+}
+
+.display_control:checked + .switch__container {
+  text-align: right;
+  background: rgb(111, 213, 111);
+  background-position: center center;
+}
