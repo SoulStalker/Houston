@@ -62,3 +62,6 @@ li {
   padding: 0 5px;
   font-size: 12px;
 }
+aside {
+  display: block;
+}
