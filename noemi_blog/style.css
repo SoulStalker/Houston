@@ -1,67 +1,523 @@
 @font-face {
-    font-family: "OpenSanse-Regular";
-    src: local("OpenSanse-Regular"),
-      url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
-  }
+  font-family: "Open Sans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff")
+    format("woff");
+  font-weight: regular;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff")
+    format("woff");
+  font-weight: bold;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
 
 .welcome {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: black;
-    
-    text-transform: uppercase;
-    color: #fff;
-    
-    min-width: 1200px;
-    min-height: 200px;
-    color: #ffffff;
-    padding-top: 80px;
-    padding-bottom: 10px;
-    font-family: OpenSanse-Regular, sans-serif;
-    text-align: center;
-
-    position: relative;
-    z-index: 0;
+  min-width: 1660px;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #000;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 0;
 }
 
-.welcome:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #000000;
-    opacity: 0.45;
-    z-index: -1;
-  }
+.welcome::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.45;
+  z-index: -1;
+}
 
-  .logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 30px;
-    padding: 20px 200px;
-  }
+.header-container {
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 15px 0px 15px;
+}
 
-  .menu ul {
-    display: flex;
-    list-style: none;
-    list-style-type: none;
-    margin-right: 200px;
-    margin-top: 30px;
-    position: absolute;
-    top: 0;
-    right: 0;
-  }
+.logo {
+  position: absolute;
+  width: 179px;
+  height: 41px;
+}
 
-li {
-  padding: 0 5px;
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-right: 200px;
+  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu-item {
+  margin-right: 35px;
+}
+
+.menu-list-item:last-child {
+  margin-right: 0px;
+}
+
+.menu-link {
+  font-weight: regular;
+  font-size: 13px;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+}
+
+.menu-link:hover {
+  text-decoration-line: underline;
+}
+
+.intro {
+  display: block;
+  padding-top: 100px;
+  padding-bottom: 124px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 687px;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 75px;
+}
+
+/* основной контент */
+.container {
+  min-width: 1660px;
+}
+
+.container-content {
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 64px 15px 64px 15px;
+}
+
+.main-content {
+  width: 778px;
+  margin-right: 120px;
+}
+
+.post {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.picture-post {
+  width: 380px;
+  height: 297px;
+}
+
+.frame {
+  margin-left: 30px;
+}
+
+.tag-list {
+  display: flex;
+}
+
+.category {
+  margin-right: 15px;
+}
+
+.tag-link {
+  color: #b59f5b;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tag-link:hover {
+  text-decoration-line: underline;
+}
+
+.ref-title-post {
+  text-decoration: none;
+}
+
+/* Настройки заголовка шрифта */
+.title-post {
+  color: #0f0d0e;
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* подсвечивание при наведении на заголовок
+поста*/
+.title-post:hover {
+  text-shadow: #b59f5b 0 0 0;
+}
+
+.date-autor {
+  display: flex;
+  margin: 25px 0 40px 0;
+}
+
+.date {
+  color: #888888;
+  font-family: "Open Sans", sans-serif;
+  font-weight: regular;
+  font-size: 12px;
+  margin-right: 15px;
+}
+
+.title-autor {
+  color: #000000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
   font-size: 12px;
 }
-aside {
+
+/* параметры текста поста */
+.text-post {
+  font-family: "Open Sans", sans-serif;
+  font-weight: regular;
+  font-size: 15px;
+  line-height: 22px;
+  color: #0f0d0e;
+  margin-top: 15px;
+}
+
+
+.last-posts {
+  width: 272px;
+  margin-bottom: 60px;
+}
+
+/* параметры заголовка  */
+.title-side {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* линия под заголовком */
+.title-side::after {
+  content: "";
   display: block;
+  width: 66px;
+  margin: 14px auto 25px auto;
+  border-bottom: 3px solid #e1d9bd;
+}
+
+.last-post-items {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.last-post-items:last-child {
+  margin-bottom: 52px;
+}
+
+.last-post-img {
+  margin: 4px 9px 7px 2px;
+}
+
+.text-items {
+  margin-left: 11px;
+}
+
+/* параметры заголовка
+ "последнего поста" */
+.last-post-title {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+
+.last-post-title:hover {
+  text-shadow: #b59f5b 0 0 0;
+}
+
+.last-post-ref {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* форма поиска */
+.search-form {
+  width: 272px;
+  display: flex;
+}
+
+.search-box {
+  display: flex;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* инпут для поиска */
+.field-search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: 222px;
+  height: 47px;
+  padding: 0;
+  padding-left: 19px;
+  border: none;
+  background: #f4f7f6;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: regular;
+}
+
+.field-search:focus {
+  outline: none;
+  border-bottom: 1px solid #ebe7d7;
+}
+
+/* параметры кнопки поиска */
+.button-search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  width: 48px;
+  height: 48px;
+  background: #b59f5b;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg");
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.button-search:hover {
+  background-color: #323232;
+}
+
+/* подписка  */
+.subscribe {
+  width: 272px;
+  margin-bottom: 60px;
+}
+
+/* инпут для подписки */
+.field-subscribe {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  width: 272px;
+  height: 47px;
+  padding: 0;
+  padding-left: 19px;
+  border: none;
+  margin-bottom: 17px;
+  background: #f4f7f6;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: regular;
+}
+
+.field-subscribe:focus {
+  outline: none;
+  border-bottom: 1px solid #ebe7d7;
+}
+
+.button-subscribe {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  width: 272px;
+  height: 48px;
+  background: #b59f5b;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.button-subscribe:hover {
+  background-color: #323232;
+}
+
+/* блок тегов */
+.tags {
+  width: 272px;
+  margin-bottom: 60px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ref-tag {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  background: white;
+  padding: 8px 14px 6px 13px;
+  margin: 0 5px 6px 1px;
+  border: 3px solid #eeeeee;
+}
+
+.ref-tag:hover {
+  border-color: #b59f5b;
+  text-shadow: #0f0d0e 0 0 0;
+}
+
+/* блок тем */
+.categories {
+  width: 272px;
+  margin-bottom: 60px;
+}
+
+/* тема */
+.topic {
+  display: flex;
+  box-sizing: border-box;
+  width: 272px;
+  height: 35px;
+  background: white;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 13px;
+}
+
+.topic:first-child {
+  margin-top: 0;
+}
+
+/* параметры ссылки темы */
+.topic-ref {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  margin-left: 2px;
+}
+
+.topic-ref:hover {
+  text-shadow: #b59f5b 0 0 0;
+}
+
+.topic-count {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #b59f5b;
+}
+
+/* подвал */
+.footer {
+  min-width: 1660px;
+}
+
+.social {
+  box-sizing: border-box;
+  width: 1200px;
+  margin: 0 auto 74px auto;
+  padding: 0 15px 0 15px;
+}
+
+/* блок с соцсетями */
+.social-items {
+  padding: 32px 0 32px 0;
+  background: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-img-ref {
+  width: 20px;
+  height: 20px;
+  margin-right: 31px;
+}
+
+.copyrights {
+  box-sizing: border-box;
+  width: 1200px;
+  height: 12px;
+  padding: 0 15px 0 15px;
+  margin: 0 auto;
+}
+
+.copyright-ref-block {
+  text-align: center;
+}
+
+.copyright-ref {
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #999999;
 }
