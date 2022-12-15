@@ -1,32 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: OpenSans, Arial, sans-serif;
+  color: inherit;
+}
 @font-face {
   font-family: "Open Sans";
   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff")
     format("woff");
-  font-weight: regular;
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Open Sans";
   src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff")
     format("woff");
-  font-weight: bold;
-}
-
-body,
-p,
-h1,
-h2,
-h3,
-ul {
-  margin: 0;
-  padding: 0;
+  font-weight: 700;
 }
 
 ul {
   list-style-type: none;
 }
 
-.welcome {
+.header {
   min-width: 1660px;
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
   background-repeat: no-repeat;
@@ -34,13 +31,12 @@ ul {
   background-size: cover;
   background-color: #000;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   position: relative;
-  z-index: 0;
+  padding: 29px 0 145px;
 }
 
-.welcome::after {
+.header::after {
   content: "";
   position: absolute;
   background-color: #000;
@@ -48,73 +44,55 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
-  opacity: 0.45;
-  z-index: -1;
+  opacity: 0.6;
 }
 
 .header-container {
   width: 1200px;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding: 0 15px;;
+  z-index: 2;
+  position: relative;
+}
+
+.header-top {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  padding: 35px 15px 0px 15px;
 }
 
 .logo {
-  position: absolute;
   width: 179px;
-  height: 41px;
 }
 
-.menu {
+.menu-list {
   display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-  margin-right: 200px;
-  margin-top: 30px;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
 
 .menu-item {
-  margin-right: 35px;
-}
-
-.menu-list-item:last-child {
-  margin-right: 0px;
+  margin-left: 35px;
 }
 
 .menu-link {
-  font-weight: regular;
+  font-weight: 400;
   font-size: 13px;
   text-decoration: none;
   text-align: center;
   color: inherit;
 }
 
+.menu {
+  margin-top: 10px;
+}
+
 .menu-link:hover {
   text-decoration-line: underline;
 }
 
-.intro {
-  display: block;
-  padding-top: 100px;
-  padding-bottom: 124px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 687px;
-  text-align: center;
-}
-
 .title {
-  font-weight: bold;
+  width: 679px;
+  text-align: center;
+  margin: 125px auto 0;
   font-size: 45px;
-  line-height: 75px;
 }
 
 /* основной контент */
@@ -124,7 +102,7 @@ ul {
 
 .container-content {
   width: 1200px;
-  box-sizing: border-box;
+  
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -167,8 +145,7 @@ ul {
   color: #b59f5b;
   text-decoration: none;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -176,51 +153,44 @@ ul {
   text-decoration-line: underline;
 }
 
-.ref-title-post {
+.link-title-post {
   text-decoration: none;
 }
 
-/* Настройки заголовка шрифта */
 .title-post {
   color: #0f0d0e;
   font-size: 20px;
   text-transform: uppercase;
   line-height: 24px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 8px;
 }
 
-/* подсвечивание при наведении на заголовок
-поста*/
 .title-post:hover {
   text-shadow: #b59f5b 0 0 0;
 }
 
-.date-autor {
+.date-author {
   display: flex;
   margin: 25px 0 40px 0;
 }
 
 .date {
-  color: #888888;
-  font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  color: #888;
+  font-weight: 400;
   font-size: 12px;
   margin-right: 15px;
 }
 
-.title-autor {
-  color: #000000;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+.title-author {
+  color: #000;
+  font-weight: 700;
   font-size: 12px;
 }
 
 /* параметры текста поста */
 .text-post {
-  font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  font-weight: 400;
   font-size: 15px;
   line-height: 22px;
   color: #0f0d0e;
@@ -235,8 +205,7 @@ ul {
 
 /* параметры заголовка  */
 .title-side {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: #0f0d0e;
   text-transform: uppercase;
@@ -274,8 +243,7 @@ ul {
 .last-post-title {
   font-size: 14px;
   line-height: 18px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: left;
   cursor: pointer;
@@ -285,12 +253,11 @@ ul {
   text-shadow: #b59f5b 0 0 0;
 }
 
-.last-post-ref {
+.last-post-link {
   text-decoration: none;
-  color: #000000;
+  color: #000;
 }
 
-/* форма поиска */
 .search-form {
   width: 272px;
   display: flex;
@@ -311,11 +278,10 @@ ul {
   overflow: hidden;
 }
 
-/* инпут для поиска */
 .field-search {
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-sizing: border-box;
+  
   width: 222px;
   height: 47px;
   padding: 0;
@@ -323,8 +289,7 @@ ul {
   border: none;
   background: #f4f7f6;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 .field-search:focus {
@@ -332,11 +297,10 @@ ul {
   border-bottom: 1px solid #ebe7d7;
 }
 
-/* параметры кнопки поиска */
 .button-search {
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-sizing: border-box;
+  
   padding: 0;
   border: none;
   width: 48px;
@@ -353,17 +317,15 @@ ul {
   background-color: #323232;
 }
 
-/* подписка  */
 .subscribe {
   width: 272px;
   margin-bottom: 60px;
 }
 
-/* инпут для подписки */
 .field-subscribe {
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-sizing: border-box;
+  
   width: 272px;
   height: 47px;
   padding: 0;
@@ -372,8 +334,7 @@ ul {
   margin-bottom: 17px;
   background: #f4f7f6;
   font-size: 13px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: regular;
+  font-weight: 400;
 }
 
 .field-subscribe:focus {
@@ -384,7 +345,7 @@ ul {
 .button-subscribe {
   -webkit-appearance: none;
   -moz-appearance: none;
-  box-sizing: border-box;
+  
   padding: 0;
   border: none;
   width: 272px;
@@ -392,9 +353,8 @@ ul {
   background: #b59f5b;
   cursor: pointer;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: white;
+  font-weight: 700;
+  color: #fff;
   text-transform: uppercase;
 }
 
@@ -402,7 +362,6 @@ ul {
   background-color: #323232;
 }
 
-/* блок тегов */
 .tags {
   width: 272px;
   margin-bottom: 60px;
@@ -413,39 +372,36 @@ ul {
   flex-wrap: wrap;
 }
 
-.ref-tag {
+.link-tag {
   text-decoration: none;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: #0f0d0e;
   text-transform: uppercase;
-  background: white;
+  background: #fff;
   padding: 8px 14px 6px 13px;
   margin: 0 5px 6px 1px;
-  border: 3px solid #eeeeee;
+  border: 3px solid #eee;
 }
 
-.ref-tag:hover {
+.link-tag:hover {
   border-color: #b59f5b;
   text-shadow: #0f0d0e 0 0 0;
 }
 
-/* блок тем */
 .categories {
   width: 272px;
   margin-bottom: 60px;
 }
 
-/* тема */
 .topic {
   display: flex;
-  box-sizing: border-box;
+  
   width: 272px;
   height: 35px;
-  background: white;
+  background: #fff;
   padding-bottom: 14px;
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid #eee;
   margin-top: 13px;
 }
 
@@ -453,25 +409,22 @@ ul {
   margin-top: 0;
 }
 
-/* параметры ссылки темы */
-.topic-ref {
+.topic-link {
   text-decoration: none;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #000000;
+  font-weight: 700;
+  color: #000;
   margin-left: 2px;
 }
 
-.topic-ref:hover {
+.topic-link:hover {
   text-shadow: #b59f5b 0 0 0;
 }
 
 .topic-count {
   text-decoration: none;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   color: #b59f5b;
 }
 
@@ -481,13 +434,12 @@ ul {
 }
 
 .social {
-  box-sizing: border-box;
+  
   width: 1200px;
   margin: 0 auto 74px auto;
   padding: 0 15px 0 15px;
 }
 
-/* блок с соцсетями */
 .social-items {
   padding: 32px 0 32px 0;
   background: #f4f7f6;
@@ -496,28 +448,27 @@ ul {
   align-items: center;
 }
 
-.social-img-ref {
+.social-img-link {
   width: 20px;
   height: 20px;
   margin-right: 31px;
 }
 
 .copyrights {
-  box-sizing: border-box;
+  
   width: 1200px;
   height: 12px;
   padding: 0 15px 0 15px;
   margin: 0 auto;
 }
 
-.copyright-ref-block {
+.copyright-link-block {
   text-align: center;
 }
 
-.copyright-ref {
+.copyright-link {
   text-decoration: none;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  color: #999999;
+  font-weight: 700;
+  color: #999;
 }
