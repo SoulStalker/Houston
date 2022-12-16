@@ -364,15 +364,17 @@ ul {
 
 .tags {
   width: 272px;
+
   margin-bottom: 60px;
 }
 
 .tags-list {
   display: flex;
   flex-wrap: wrap;
+  min-height: 120px;
 }
 
-.link-tag {
+.tag-link {
   text-decoration: none;
   font-size: 12px;
   font-weight: 700;
@@ -384,7 +386,7 @@ ul {
   border: 3px solid #eee;
 }
 
-.link-tag:hover {
+.tag-link:hover {
   border-color: #b59f5b;
   text-shadow: #0f0d0e 0 0 0;
 }
@@ -426,6 +428,7 @@ ul {
   font-size: 12px;
   font-weight: 700;
   color: #b59f5b;
+  margin-left: 3px;
 }
 
 /* подвал */
